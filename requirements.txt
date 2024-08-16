@@ -1,0 +1,6 @@
+aiohttp~=3.9.3
+asyncpg
+sqlalchemy[asyncio]~=2.0.32
+alembic
+geopy~=2.4.1
+aiohttp_cors
