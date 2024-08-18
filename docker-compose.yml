@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+      POSTGRES_DB: citiesdb
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - db
     environment:
-      DB_URL: postgresql://user:password@db:5432/mydatabase
+      DB_URL: postgresql://user:password@db:5432/citiesdb
     ports:
       - "8080:8080"
     command: ["sh", "-c", "sleep 10 && python app.py"]  # Задержка перед запуском приложения
